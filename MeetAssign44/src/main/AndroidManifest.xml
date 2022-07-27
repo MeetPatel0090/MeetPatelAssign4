@@ -11,7 +11,8 @@
         android:theme="@style/Theme.MeetAssign4">
         <activity
             android:name=".MeetActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MeetAssign4.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
