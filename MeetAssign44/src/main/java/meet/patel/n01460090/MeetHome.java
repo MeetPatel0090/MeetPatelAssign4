@@ -49,34 +49,36 @@ public class MeetHome extends Fragment {
         textClock = (TextClock) view.findViewById(R.id.MeetTextClock);
         textClock.setText(getCurrentTime());
 
-        getParentFragmentManager().setFragmentResultListener("sentTime", this, ((requestKey, result) -> {
-            String timeIn = result.getString("setTime");
-            switch (timeIn){
+        getParentFragmentManager().setFragmentResultListener(getString(R.string.bundle_time_key), this, ((requestKey, result) -> {
+            String time = result.getString(getString(R.string.bundle_time_put_string));
+            switch (time){
                 case "12hr":
                     textClock = (TextClock) view.findViewById(R.id.MeetTextClock);
-                    textClock.setFormat12Hour("hh:mm a");
+                    textClock.setFormat24Hour(null);
+                    textClock.setFormat12Hour("hh:mm:ss a");
                     break;
                 case "24hr":
                     textClock = (TextClock) view.findViewById(R.id.MeetTextClock);
-                    textClock.setFormat24Hour("kk:mm a");
+                    textClock.setFormat12Hour(null);
+                    textClock.setFormat24Hour("kk:mm:ss");
                     break;
             }
         }));
 
         constraintLayout = view.findViewById(R.id.MeetHomeFrag);
-        getParentFragmentManager().setFragmentResultListener("sentHomeBg", this, new FragmentResultListener() {
+        getParentFragmentManager().setFragmentResultListener(getString(R.string.bundle_background_key), this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
-                String homeIn = result.getString("setHomeBg");
-                switch (homeIn){
+                String homeBackground = result.getString(getString(R.string.bundle_background_put_string));
+                switch (homeBackground){
                     case "Pink":
                         constraintLayout.setBackgroundColor(Color.parseColor("#fab4f4"));
                         break;
-                    case "white":
-                        constraintLayout.setBackgroundColor(Color.parseColor("##b4e7fa"));
+                    case "Blue":
+                        constraintLayout.setBackgroundColor(Color.parseColor("#b4e7fa"));
                         break;
-                    case "red":
-                        constraintLayout.setBackgroundColor(Color.parseColor("#000000"));
+                    case "White":
+                        constraintLayout.setBackgroundColor(Color.parseColor("#FFFFFF"));
                         break;
                 }
             }

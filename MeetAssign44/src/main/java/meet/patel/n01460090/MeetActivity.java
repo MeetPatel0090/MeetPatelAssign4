@@ -155,7 +155,7 @@ public class MeetActivity extends AppCompatActivity implements NavigationView.On
 
         alertDialog.setNegativeButton(R.string.alert_no, null);
 
-        alertDialog.setMessage(R.string.alert_meessage);
+        alertDialog.setMessage(R.string.alert_message);
         alertDialog.setTitle(R.string.alert_title);
         alertDialog.show();
     }

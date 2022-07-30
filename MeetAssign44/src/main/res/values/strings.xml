@@ -26,7 +26,7 @@
     <string name="home_file_name">meet.txt</string>
     <string name="alert_yes">Yes</string>
     <string name="alert_no">No</string>
-    <string name="alert_meessage">Do you want to Exit?</string>
+    <string name="alert_message">Do you want to Exit?</string>
     <string name="alert_title">Meet Patel N01460090</string>
     <string name="enter_text_home">Enter some info</string>
     <string name="listview_razer">Razer</string>
@@ -36,4 +36,18 @@
     <string name="download_desc">Downloading picture</string>
     <string name="download_granted">Permission granted, press again to download</string>
     <string name="download_denied">Permission denied</string>
+    <string name="construction">Under Construction</string>
+    <string name="radio_12hr_format">12hr Format</string>
+    <string name="radio_24hr_format">24hr Format</string>
+    <string name="time_settings">Time Settings</string>
+    <string name="radio_text_12hr">12hr</string>
+    <string name="radio_text_24hr">24hr</string>
+    <string name="bundle_time_put_string">setTime</string>
+    <string name="bundle_time_key">sentTime</string>
+    <string name="bundle_background_put_string">setHomeBackground</string>
+    <string name="bundle_background_key">SentHomeBackground</string>
+    <string name="radio_text_pink">Pink</string>
+    <string name="radio_text_white">White</string>
+    <string name="radio_text_blue">Blue</string>
+
 </resources>

@@ -37,10 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginEnd="135dp"
         android:textSize="25sp"
-        android:format12Hour="k:mm a"
-        android:format24Hour="h:mm a"
+        android:format12Hour="hh:mm:ss a"
+        android:format24Hour="kk:mm:ss"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>

@@ -7,58 +7,71 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SettingsScreen#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SettingsScreen extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public SettingsScreen() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SettingsScreen.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static SettingsScreen newInstance(String param1, String param2) {
-        SettingsScreen fragment = new SettingsScreen();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    RadioGroup radioGroupTime, radioGroupHome;
+    String setTime, setHomeBackground;
+    private Bundle bundle = new Bundle();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.settings_screen, container, false);
+        View view = inflater.inflate(R.layout.settings_screen, container, false);
+
+        radioGroupTime = view.findViewById(R.id.MeetTimeRadioGroup);
+        radioGroupTime.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.Meet12HrRadioBtn:
+                        setTime = "12hr";
+                        bundle.putString(getString(R.string.bundle_time_put_string),setTime);
+                        getParentFragmentManager().setFragmentResult(getString(R.string.bundle_time_key),bundle);
+                        break;
+                    case R.id.Meet24HrRadioBtn:
+                        setTime = "24hr";
+                        bundle.putString(getString(R.string.bundle_time_put_string),setTime);
+                        getParentFragmentManager().setFragmentResult(getString(R.string.bundle_time_key),bundle);
+                }
+            }
+        });
+
+
+        radioGroupHome = (RadioGroup) view.findViewById(R.id.MeetHomeBackgroundColorSettingsRadioGroup);
+        radioGroupHome.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.MeetPink:
+                        setHomeBackground = "Pink";
+                        bundle.putString(getString(R.string.bundle_background_put_string), setHomeBackground);
+                        getParentFragmentManager().setFragmentResult(getString(R.string.bundle_background_key), bundle);
+                        break;
+                    case R.id.MeetBlue:
+                        setHomeBackground = "Blue";
+                        bundle.putString(getString(R.string.bundle_background_put_string),setHomeBackground);
+                        getParentFragmentManager().setFragmentResult(getString(R.string.bundle_background_key), bundle);
+                        break;
+                    case R.id.MeetWhite:
+                        setHomeBackground = "White";
+                        bundle.putString(getString(R.string.bundle_background_put_string),setHomeBackground);
+                        getParentFragmentManager().setFragmentResult(getString(R.string.bundle_background_key), bundle);
+                        break;
+                }
+            }
+        });
+
+        return view;
     }
+
+
 }
