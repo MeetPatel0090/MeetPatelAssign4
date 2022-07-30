@@ -81,27 +81,24 @@ public class MeetActivity extends AppCompatActivity implements NavigationView.On
     {
 
         // Handle item selection
-        switch (menuitem.getItemId())
-        {
-            case R.id.MeetMenuItem1:
-                break;
-
-            case R.id.MeetMenuItem2:
-                startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
-                break;
-
-            case R.id.MeetMenuItem3:
-                gotoUrl();
-                break;
-
-            case android.R.id.home:
-
-
-
+        switch (menuitem.getItemId()) {
+            case R.id.MeetMenuHome:
+                getSupportFragmentManager().beginTransaction().replace(R.id.MeetFrameLayout,
+                        new MeetHome()).commit();
                 return true;
-        }
-        return super.onOptionsItemSelected(menuitem);
 
+            case R.id.MeetMenuSettings:
+                startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+                return true;
+
+            case R.id.MeetMenuHelp:
+                gotoUrl();
+                return true;
+
+
+            default:
+                return super.onOptionsItemSelected(menuitem);
+        }
     }
 
     private void gotoUrl()

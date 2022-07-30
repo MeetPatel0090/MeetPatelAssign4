@@ -3,7 +3,6 @@
     <string name="menu_home">Home</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_help">Help</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_home">Home</string>
     <string name="nav_download">Download</string>
@@ -12,4 +11,6 @@
     <string name="nav_settings">Settings</string>
     <string name="nav_open">Meet Menu Open</string>
     <string name="nav_close">Meet Menu Closing</string>
+    <string name="nav_name">Meet Patel</string>
+    <string name="nav_mail">meetpatel12302@gmail.com</string>
 </resources>

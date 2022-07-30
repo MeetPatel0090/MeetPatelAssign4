@@ -3,17 +3,22 @@
 
     <item
         android:id="@+id/MeetNavHome"
-        android:title="@string/nav_home" />
+        android:title="@string/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"/>
     <item
         android:id="@+id/MeetNavDownload"
-        android:title="@string/nav_download" />
+        android:title="@string/nav_download"
+        android:icon="@drawable/ic_baseline_download_24"/>
     <item
         android:id="@+id/MeetNavWeather"
-        android:title="@string/nav_weather" />
+        android:title="@string/nav_weather"
+        android:icon="@drawable/ic_baseline_wb_sunny_24"/>
     <item
         android:id="@+id/MeetNavFileContent"
-        android:title="@string/nav_file_content" />
+        android:title="@string/nav_file_content"
+        android:icon="@drawable/ic_baseline_insert_drive_file_24"/>
     <item
         android:id="@+id/MeetNavSettings"
-        android:title="@string/nav_settings" />
+        android:title="@string/nav_settings"
+        android:icon="@drawable/ic_baseline_settings_24"/>
 </menu>
