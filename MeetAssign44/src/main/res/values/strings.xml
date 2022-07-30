@@ -16,6 +16,7 @@
     <string name="nav_name">Meet Patel</string>
     <string name="nav_mail">meetpatel12302@gmail.com</string>
     <string name="home_frag_heading">Home</string>
+    <string name="download_frag_heading">Download</string>
     <string name="home_frag_date">Date</string>
     <string name="home_enter_btn">Enter</string>
     <string name="home_read_btn">Read File</string>
@@ -28,4 +29,11 @@
     <string name="alert_meessage">Do you want to Exit?</string>
     <string name="alert_title">Meet Patel N01460090</string>
     <string name="enter_text_home">Enter some info</string>
+    <string name="listview_razer">Razer</string>
+    <string name="listview_apple">Apple</string>
+    <string name="listview_twitch">Twitch</string>
+    <string name="download_title">Downloading</string>
+    <string name="download_desc">Downloading picture</string>
+    <string name="download_granted">Permission granted, press again to download</string>
+    <string name="download_denied">Permission denied</string>
 </resources>
