@@ -4,12 +4,14 @@ package meet.patel.n01460090;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -50,11 +52,11 @@ public class MeetActivity extends AppCompatActivity implements NavigationView.On
                 R.string.nav_open, R.string.nav_close){
             public void onDrawerOpened(View view){
                 super.onDrawerOpened(view);
-                Snackbar.make(findViewById(android.R.id.content),R.string.nav_open,Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(android.R.id.content),R.string.nav_open_msg,Snackbar.LENGTH_SHORT).show();
             }
             public void onDrawerClosed(View view){
                 super.onDrawerClosed(view);
-                Toast.makeText(getApplicationContext(),R.string.nav_close, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),R.string.nav_close_msg, Toast.LENGTH_SHORT).show();
             }
         };
         drawerLayout.addDrawerListener(toggle);
@@ -73,7 +75,7 @@ public class MeetActivity extends AppCompatActivity implements NavigationView.On
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.meet_menu, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -136,5 +138,31 @@ public class MeetActivity extends AppCompatActivity implements NavigationView.On
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void doExit() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+                MeetActivity.this);
+
+        alertDialog.setPositiveButton(R.string.alert_yes, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        alertDialog.setNegativeButton(R.string.alert_no, null);
+
+        alertDialog.setMessage(R.string.alert_meessage);
+        alertDialog.setTitle(R.string.alert_title);
+        alertDialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        doExit();
     }
 }

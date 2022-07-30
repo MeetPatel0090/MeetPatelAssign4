@@ -9,8 +9,23 @@
     <string name="nav_weather">Weather</string>
     <string name="nav_file_content">File Content</string>
     <string name="nav_settings">Settings</string>
-    <string name="nav_open">Meet Menu Open</string>
-    <string name="nav_close">Meet Menu Closing</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="nav_open_msg">Meet Menu Open</string>
+    <string name="nav_close_msg">Meet Menu Closing</string>
     <string name="nav_name">Meet Patel</string>
     <string name="nav_mail">meetpatel12302@gmail.com</string>
+    <string name="home_frag_heading">Home</string>
+    <string name="home_frag_date">Date</string>
+    <string name="home_enter_btn">Enter</string>
+    <string name="home_read_btn">Read File</string>
+    <string name="home_frag_toast_text">\"Written to File: \"</string>
+    <string name="home_frag_toast_text_read">\"Reading from File: \"</string>
+    <string name="date_home_frag">hh:mm a</string>
+    <string name="home_file_name">meet.txt</string>
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+    <string name="alert_meessage">Do you want to Exit?</string>
+    <string name="alert_title">Meet Patel N01460090</string>
+    <string name="enter_text_home">Enter some info</string>
 </resources>

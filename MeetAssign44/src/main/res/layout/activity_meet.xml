@@ -1,48 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/MeetNavigationDrawer"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MeetActivity">
-
-<LinearLayout
-    android:id="@+id/MeetLinearLayout"
-    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MeetNavigationDrawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <include
-        layout="@layout/meet_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/MeetFrameLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <FrameLayout
-        android:id="@+id/MeetFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@layout/meet_toolbar">
-    </FrameLayout>
-
-</LinearLayout>
-
-<!--this the navigation view which draws
-    and shows the navigation drawer-->
-<!--include the menu created in the menu folder-->
-<com.google.android.material.navigation.NavigationView
-    android:id="@+id/MeetNavigationView"
-    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_gravity="start"
-    app:menu="@menu/meet_navigation_drawer"
-    app:headerLayout="@layout/nav_header"/>
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MeetActivity">
+
+    <LinearLayout
+        android:id="@+id/MeetLinearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/meet_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <FrameLayout
+            android:id="@+id/MeetFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/MeetNavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:layout_marginEnd="-65dp"
+        android:layout_marginRight="-65dp"
+        app:menu="@menu/meet_navigation_drawer"
+        app:headerLayout="@layout/nav_header"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>
