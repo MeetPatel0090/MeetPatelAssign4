@@ -49,5 +49,21 @@
     <string name="radio_text_pink">Pink</string>
     <string name="radio_text_white">White</string>
     <string name="radio_text_blue">Blue</string>
+    <string name="weather_last_name">Patel N01460090</string>
+    <string name="weather_head_tv">Weather</string>
+    <string name="weather_toast_error">Error</string>
+    <string name="weather_longitude">Longitude</string>
+    <string name="weather_latitude">Latitude</string>
+    <string name="weather_country">Country</string>
+    <string name="weather_humidity">Humidity</string>
+    <string name="weather_city">City</string>
+    <string name="weather_description">Description</string>
+    <string-array name="cities">
+        <item>Toronto</item>
+        <item>London</item>
+        <item>New Delhi</item>
+        <item>Sydney</item>
+        <item>Paris</item>
+    </string-array>
 
 </resources>
