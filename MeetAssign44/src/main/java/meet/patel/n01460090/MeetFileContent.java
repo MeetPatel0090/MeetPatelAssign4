@@ -101,6 +101,7 @@ public class MeetFileContent extends Fragment {
     public void deleteFile(View v){
         File file = new File(getActivity().getFilesDir(), getString(R.string.file_content_child_file_name));
         boolean deleted = file.delete();
+        readTextView.setText("File Deleted!!!");
         Toast.makeText(getActivity().getApplicationContext(),getString(R.string.file_content_file_deleted) + file, Toast.LENGTH_SHORT).show();
     }
 

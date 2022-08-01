@@ -1,5 +1,7 @@
 package meet.patel.n01460090;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -33,6 +35,8 @@ public class MeetHome extends Fragment {
     Button writeBtn, readBtn;
     EditText editText;
     ConstraintLayout constraintLayout;
+    SharedPreferences sharedPreferences;
+    String name = "Meet Patel";
 
 
     @Override
@@ -45,6 +49,7 @@ public class MeetHome extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.meet_home, container, false);
+        sharedPreferences = getActivity().getSharedPreferences("Name", Context.MODE_PRIVATE);
 
         textClock = (TextClock) view.findViewById(R.id.MeetTextClock);
         textClock.setText(getCurrentTime());
@@ -143,5 +148,13 @@ public class MeetHome extends Fragment {
 
     private String getCurrentTime(){
         return new SimpleDateFormat(getString(R.string.date_home_frag), Locale.getDefault()).format(new Date());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("Name",name);
+        editor.commit();
     }
 }
