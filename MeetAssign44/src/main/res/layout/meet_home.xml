@@ -45,63 +45,40 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
     <EditText
         android:id="@+id/MeetHomeEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="285dp"
+        android:layout_marginTop="304dp"
         android:layout_marginEnd="100dp"
-        android:ems="10"
         android:digits="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm12345567890"
-        android:maxLength="10"
+        android:ems="10"
         android:hint="@string/enter_text_home"
-        tools:ignore="TouchTargetSizeCheck"
+        android:maxLength="10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/MeetHomeReadTextView"
-        android:layout_width="405dp"
-        android:layout_height="67dp"
-        android:text=" "
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/MeetHomeEnterBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="240dp"
+        android:layout_width="144dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="132dp"
+        android:backgroundTint="@color/black"
         android:text="@string/home_enter_btn"
         android:textSize="18sp"
-        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/MeetHomeReadBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="70dp"
-        android:text="@string/home_read_btn"
-        android:textSize="18sp"
-        android:backgroundTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/MeetHomeImageView"
-        android:background="@drawable/gradient"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginEnd="110dp"
+        android:layout_marginTop="484dp"
+        android:layout_marginEnd="96dp"
+        android:background="@drawable/gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

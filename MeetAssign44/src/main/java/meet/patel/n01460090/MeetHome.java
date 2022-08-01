@@ -95,9 +95,8 @@ public class MeetHome extends Fragment {
         textViewDate.setText(currentDate);
 
         writeBtn = view.findViewById(R.id.MeetHomeEnterBtn);
-        readBtn = view.findViewById(R.id.MeetHomeReadBtn);
         editText = view.findViewById(R.id.MeetHomeEditText);
-        readTextView = view.findViewById(R.id.MeetHomeReadTextView);
+
 
         writeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,31 +107,9 @@ public class MeetHome extends Fragment {
             }
         });
 
-        readBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String content = readFileFile(getString(R.string.home_file_name));
-                readTextView.setText(content);
-            }
-        });
         return view;
     }
 
-    private String readFileFile(String file){
-        File path = getActivity().getApplicationContext().getFilesDir();
-        File read = new File(path,file);
-        byte[] content = new byte[(int)read.length()];
-        try{
-            FileInputStream stream = new FileInputStream(read);
-            stream.read(content);
-            Toast.makeText(getActivity().getApplicationContext(),getString(R.string.home_frag_toast_text_read) + file, Toast.LENGTH_SHORT).show();
-            return new String(content);
-
-        }catch (Exception e){
-            e.printStackTrace();
-            return e.toString();
-        }
-    }
 
     public void writeToFile(String file, String content){
         File path = getActivity().getApplicationContext().getFilesDir();
