@@ -28,7 +28,7 @@ import java.util.Locale;
 
 public class MeetHome extends Fragment {
 
-    TextView textView, readFileTextView;
+    TextView textView, readTextView;
     TextClock textClock;
     Button writeBtn, readBtn;
     EditText editText;
@@ -92,7 +92,7 @@ public class MeetHome extends Fragment {
         writeBtn = view.findViewById(R.id.MeetHomeEnterBtn);
         readBtn = view.findViewById(R.id.MeetHomeReadBtn);
         editText = view.findViewById(R.id.MeetHomeEditText);
-        readFileTextView = view.findViewById(R.id.MeetHomeReadTextView);
+        readTextView = view.findViewById(R.id.MeetHomeReadTextView);
 
         writeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +107,7 @@ public class MeetHome extends Fragment {
             @Override
             public void onClick(View v) {
                 String content = readFileFile(getString(R.string.home_file_name));
-                readFileTextView.setText(content);
+                readTextView.setText(content);
             }
         });
         return view;
