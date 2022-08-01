@@ -24,6 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.InputStream;
@@ -42,8 +43,8 @@ public class PatelDownload extends Fragment {
     private static final int PERMISSION_STORAGE_CODE = 1000;
     ProgressBar progressBar;
     ImageView imageView = null;
+    SharedPreferences sharedPreferences;
 
-    private SharedPreferences sharedPreferences;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,6 +54,11 @@ public class PatelDownload extends Fragment {
         imageView = (ImageView) view.findViewById(R.id.MeetDownloadImageView);
         progressBar = (ProgressBar) view.findViewById(R.id.MeetDownloadProgressBar);
         progressBar.setVisibility(View.INVISIBLE);
+
+        TextView textView = view.findViewById(R.id.MeetDownloadTextViewSharedPref);
+        sharedPreferences = getActivity().getSharedPreferences("Name", Context.MODE_PRIVATE);
+        String dataFromHome = sharedPreferences.getString("Name","");
+        textView.setText(dataFromHome);
 
         listView = (ListView) view.findViewById(R.id.MeetDownloadListView);
         ArrayList<String> arrayList = new ArrayList<>();
