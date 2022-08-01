@@ -1,3 +1,5 @@
+// Meet Patel N01460090 Section:- RNB
+
 package meet.patel.n01460090;
 
 import android.content.Context;
@@ -52,7 +54,6 @@ public class MeetHome extends Fragment {
         sharedPreferences = getActivity().getSharedPreferences("Name", Context.MODE_PRIVATE);
 
         textClock = (TextClock) view.findViewById(R.id.MeetTextClock);
-        textClock.setText(getCurrentTime());
 
         getParentFragmentManager().setFragmentResultListener(getString(R.string.bundle_time_key), this, ((requestKey, result) -> {
             String time = result.getString(getString(R.string.bundle_time_put_string));
@@ -123,9 +124,6 @@ public class MeetHome extends Fragment {
         }
     }
 
-    private String getCurrentTime(){
-        return new SimpleDateFormat(getString(R.string.date_home_frag), Locale.getDefault()).format(new Date());
-    }
 
     @Override
     public void onResume() {

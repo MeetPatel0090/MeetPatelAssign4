@@ -1,3 +1,4 @@
+<!--Meet Patel N01460090 Section:- RNB-->
 <resources>
     <string name="app_name">Meet Patel N01460090</string>
     <string name="menu_home">Home</string>
@@ -21,7 +22,7 @@
     <string name="home_read_btn">Read File</string>
     <string name="home_frag_toast_text">\"Written to File: \"</string>
     <string name="home_frag_toast_text_read">\"Reading from File: \"</string>
-    <string name="date_home_frag">hh:mm a</string>
+    <string name="date_home_frag">hh:mm:ss a</string>
     <string name="home_file_name">meet.txt</string>
     <string name="alert_yes">Yes</string>
     <string name="alert_no">No</string>

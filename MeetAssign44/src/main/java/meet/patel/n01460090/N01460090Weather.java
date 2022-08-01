@@ -1,3 +1,5 @@
+// Meet Patel N01460090 Section:- RNB
+
 package meet.patel.n01460090;
 
 import android.os.Bundle;
@@ -113,15 +115,15 @@ public class N01460090Weather extends Fragment {
                     JSONObject jsonObjectCoord = jsonObject.getJSONObject("coord");
                     double longitude = jsonObjectCoord.getDouble("lon");
                     double latitude = jsonObjectCoord.getDouble("lat");
-                    String convLon = Double.toString(longitude);
-                    String convLat = Double.toString(latitude);
-                    String convHum = Integer.toString(humidity);
+                    String convertedLongitude = Double.toString(longitude);
+                    String convertedLatitude = Double.toString(latitude);
+                    String convertedHumidity = Integer.toString(humidity);
 
                     Country.setText(countryName);
                     Name.setText(cityName);
-                    Latitude.setText(convLat);
-                    Longitude.setText(convLon);
-                    Humidity.setText(convHum + "°C");
+                    Latitude.setText(convertedLongitude);
+                    Longitude.setText(convertedLatitude);
+                    Humidity.setText(convertedHumidity);
                     Description.setText(description);
                 } catch (JSONException e) {
                     e.printStackTrace();
